@@ -75,9 +75,10 @@
 
             <!-- This is modal area -->
             <input type="checkbox" name="" id="modal">
-            <div class="mainmodal">
+            <div class="mainmodal" id="m1">
                 <div class="boxmodal">
                     <div>
+                        <button type="button" class="close"  onclick="document.getElementById('m1').style.display='none'">&times;</button>
                         <h3 class="mdl-design">Modal Here</h3>
                         <p class="para">This is a modal box.It appears when we click on "Modal Here" that is located at bottom left corner on the main page.On clicking, this box appears while the content of main page gets dimmed,which is now happening as you can see. </p>
                     </div>
@@ -85,7 +86,8 @@
             </div>
         </div>
         <div class="modal-btn">
-            <label for="modal">Modal Here</label>
+            <label for="modal" onclick="document.getElementById('m1').style.display='block'">Modal Here</label>
+            
         </div>
     </body>
 </html>
