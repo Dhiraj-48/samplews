@@ -1,0 +1,163 @@
+
+*{
+    font-family: sans-serif;
+}
+.main{
+    display:grid;
+    grid:auto auto/auto auto ;  
+    background-color: gray;
+    grid-gap:10px;
+    padding: 50px 0px 10px 0px;
+    font-size:30px;
+    margin-top: 70px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:-1;
+}
+.folder{
+    background-color:rgb(68, 37, 97);
+    text-align: center;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    font-size: 30px;
+    height:100px;
+    justify-content:space-evenly;
+    border-style:inherit;
+    border-radius: 5px;
+}
+.folder-logo{
+    height:50px;
+    border-radius: 50%;
+}
+.folder-name{
+    font-size: 20px;
+    text-align: center;
+}
+.folder-desc{
+    font-size: 15px;
+    text-align:center;
+    text-overflow: ellipsis;
+    text-rendering: geometricPrecision;
+    text-decoration-line: overline;
+    text-decoration-color: aqua;
+}
+
+
+.nav-top{
+    background: lightgreen;
+    width:98.5%;
+    height:6vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:0px -20px 0px 0px;
+    /* position:absolute; */
+    position:fixed;
+    top:0;
+    right:5;
+    border-radius:50px;
+}
+
+.option{
+    display: inline-block;
+    justify-content: space-evenly;
+}
+
+.option ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    padding:5px 10px;
+    margin:15px;
+    font-weight: 400;
+    color:black;
+    cursor:pointer;
+    position:relative;
+    z-index:2;
+    /* transition:color 0.5s; */
+}
+.option ul li::after{
+    content:'';
+    background: rgb(222, 10, 191);
+    width:100%;
+    height:100%;
+    position:absolute;
+    border-radius: 20px;
+    top:100%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index:-1;
+    opacity:0;
+    transition:top 0.5s, opacity 0.5s;
+}
+.option ul li:hover{
+    color:white;
+}
+.option ul li:hover::after{
+    top:50%;
+    opacity:1;
+}
+.modal-btn{
+    padding-top: 30px;
+}
+
+.modal-btn label{
+    background-color: black;
+    color:white;
+    border-radius: 30px;
+    text-align: center;
+    padding:5px 15px;
+    font-size: 24px;
+}
+
+#modal{
+    display: none;
+}
+.mainmodal{
+    width:100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+    position: fixed;
+    z-index:1;
+    background:rgba(0,0,0,0.5)
+}
+.boxmodal{
+    display: grid;
+    width:50%;
+    height: 400px;
+    transform:translateY(-500px);
+    transition:all 2s;
+    margin:auto;
+    background:#fff;
+    opacity: 1;
+    z-index: 100;
+}
+
+
+
+#modal:checked+  .mainmodal{
+    visibility: visible;
+    opacity:1;
+}
+
+#modal:checked+ .mainmodal .boxmodal{
+    transform: translateY(0);
+    opacity:1;
+}
+.mdl-design{
+    background-color: blueviolet;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: darkkhaki;
+    text-indent: 10px;
+}
+
+.para{
+    font-size: 20px;
+    text-align: center;
+    text-overflow: 0;
+}
